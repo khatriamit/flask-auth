@@ -10,10 +10,11 @@ def create_app(test_config=None):
     )
 
     if test_config is None:
+        print("hellos")
         app.config.from_mapping(
-            SECRET_KEY="dev", SQLALCHEMY_DATABASE_URI="sqlite:///./test.db"
+            SECRET_KEY="dev",
+            SQLALCHEMY_DATABASE_URI="sqlite:///./test.db",
         )
-
     else:
         app.config.from_mapping(test_config)
 
